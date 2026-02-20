@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Login</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuração customizada -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2676EF',
+            secondary: '#40A9F4'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="min-h-screen flex items-center justify-center 
+             bg-[url('https://source.unsplash.com/1920x1080/?mountain')] 
+             bg-cover bg-center
+             dark:bg-gray-900">
+
+  <main class="w-full max-w-sm bg-white dark:bg-gray-800
+               rounded-2xl shadow-lg p-8
+               mx-4 sm:mx-0">
+
+    <h1 class="text-2xl font-semibold text-gray-800 dark:text-white text-center">
+      Bem-vindo(a)
+    </h1>
+
+    <h2 class="text-sm text-gray-500 dark:text-gray-300 text-center mb-6">
+      Insira seus dados de acesso
+    </h2>
+
+    <form class="flex flex-col space-y-4">
+
+      <!-- Email -->
+      <div class="relative">
+        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-200">
+          E-mail
+        </label>
+        <i class='bx bxs-user absolute left-3 top-9 text-gray-400'></i>
+        <input type="email"
+          placeholder="Seu email:"
+          class="w-full pl-10 pr-3 py-2 mt-1
+                 border border-gray-300 rounded-md
+                 focus:outline-none focus:ring-2 focus:ring-primary
+                 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+      </div>
+
+      <!-- Senha -->
+      <div class="relative">
+        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-200">
+          Senha
+        </label>
+        <i class='bx bxs-key absolute left-3 top-9 text-gray-400'></i>
+        <input type="password"
+          placeholder="Sua senha:"
+          class="w-full pl-10 pr-3 py-2 mt-1
+                 border border-gray-300 rounded-md
+                 focus:outline-none focus:ring-2 focus:ring-primary
+                 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+      </div>
+
+      <a class="text-primary hover:text-blue-700 text-sm cursor-pointer">
+        Esqueceu a senha?
+      </a>
+
+      <button type="submit"
+        class="w-full py-2 rounded-md text-white font-semibold
+               bg-gradient-to-r from-primary to-secondary
+               hover:opacity-90 transition">
+        Login
+      </button>
+
+    </form>
+
+  </main>
+
+</body>
+</html>
